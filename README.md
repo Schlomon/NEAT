@@ -2,10 +2,10 @@
 http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf
 
 ## Build and run:
-1. Install python
+1. Install python3
 2. Install scons:
 ```sh
-python -m pip install scons
+python3 -m pip install scons
 ```
 3. Clone the project:
 ```
