@@ -21,3 +21,6 @@ scons
 cd bin/
 neat.exe
 ```
+
+## Info
+* Naming convention: http://manual.gromacs.org/5.1.1/dev-manual/naming.html
