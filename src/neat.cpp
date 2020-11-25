@@ -1,10 +1,12 @@
 #include <iostream>
-#include <thread>
-#include <chrono>
+#include "genome.h"
 
+using namespace std;
 int main() {
-    std::cout << "Starting NEAT ..." << std::endl;
-    std::this_thread::sleep_for(std::chrono::milliseconds(5000));
-    std::cout << "Prank, there is nothing implemented yet :P" << std::endl;
+    Genome genome;
+    int a, b;
+    cout << "Enter two numbers:" << endl;
+    cin >> a >> b;
+    cout << "Thanks, your result is: " << genome.test(a, b) << endl;
     return 0;
 }
