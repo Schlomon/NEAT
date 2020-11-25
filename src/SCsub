@@ -1,1 +1,4 @@
-Program('neat.cpp');
+Import('env')
+sources = ['neat.cpp',
+            'genome.cpp']
+env.Program(source=sources);
