@@ -1,4 +1,15 @@
-*.out
+# C++ ignores
 *.o
+*.slo
+*.lo
+*.obj
+*.exe
+*.out
+*.app
+
+# scons ignores
 .sconsign.dblite
 bin/
+
+# IDE ignores
+.theia/
