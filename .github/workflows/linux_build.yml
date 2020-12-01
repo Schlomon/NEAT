@@ -11,6 +11,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        
+      # Use python 3.x release
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          architecture: 'x64'
 
       - name: Install Scons
         run: |
