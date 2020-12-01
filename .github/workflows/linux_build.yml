@@ -2,6 +2,7 @@ name: Scons Build
 
 on:
   push:
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
