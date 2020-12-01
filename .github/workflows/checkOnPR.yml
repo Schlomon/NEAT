@@ -1,0 +1,17 @@
+name: Greetings
+
+on:
+  pull_request:
+    branches: master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build with Scons
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Scons
+        run: python3 -m pip install scons
+      - name: Build
+        run: scons
+          
