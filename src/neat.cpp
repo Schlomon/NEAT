@@ -1,3 +1,5 @@
+// Copyright 2020 <Robin Quendt, Salomo Hummel>
+
 #include <iostream>
 #include "genome.h"
 
