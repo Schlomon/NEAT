@@ -29,4 +29,4 @@ jobs:
           cpplint --version
 
       - name: Check formatting
-        run: cpplint src/*.cpp
+        run: cpplint src/*.cpp src/*.h
