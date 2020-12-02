@@ -1,10 +1,12 @@
+// Copyright 2020 <Robin Quendt, Salomo Hummel>
+
 #pragma once
 
 class Genome {
-private:
+ private:
     // private members
     // private methods
-public:
+ public:
     // public members
     // public constructor
     // public methods
