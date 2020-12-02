@@ -1,4 +1,5 @@
-// Copyright 2020 <Robin Quendt, Salomo Hummel>
+// Copyright (c) 2020 Schlomon
+// Copyright (c) 2020 Quendt
 
 #pragma once
 
