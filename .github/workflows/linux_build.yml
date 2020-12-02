@@ -1,8 +1,6 @@
 name: Scons Build
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -27,6 +25,5 @@ jobs:
           python --version
           scons --version
 
-      # Runs a set of commands using the runners shell
-      - name: Compile
+      - name: Compile with Scons
         run: scons
