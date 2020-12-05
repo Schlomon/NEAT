@@ -1,5 +1,4 @@
 # NEAT
-http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf
 
 ## Build and run:
 1. Install python3
