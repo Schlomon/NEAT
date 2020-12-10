@@ -23,7 +23,7 @@
                 }
             ],
             "preLaunchTask": "Scons build",
-            "miDebuggerPath": "/usr/bin/gdb",
+            "miDebuggerPath": "gdb",
             "sourceFileMap":{
                 "${workspaceFolder}/debug/": "${workspaceFolder}/src/"
             }
