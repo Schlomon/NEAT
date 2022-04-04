@@ -2,7 +2,7 @@
 // Copyright (c) 2020 Quendt
 
 #include <iostream>
-#include "headers/genome.h"
+#include "genome.h"
 
 int main() {
     Genome genome;
