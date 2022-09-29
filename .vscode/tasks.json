@@ -2,7 +2,7 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "Scons build",
+            "label": "scons build",
             "command": "scons -Q debug=1",
             "options": {
                 "cwd": "${workspaceFolder}"
