@@ -29,4 +29,6 @@ bin/neat
 Install Python, Scons and VSCode. Clone the project from github and open the `NEAT` folder in VSCode.
 Make sure to install the official `C/C++` Extension by Microsoft. Make sure to satisfy the requirements of the `C/C++` Extension.
 <br>
-When selecting the `Run and Debug` tab `(Ctrl+Shift+D)` you can now debug the application when selection the `Debug` configuration.
+When selecting the `Run and Debug` tab (`Ctrl+Shift+D`) you can now debug the application when selection the `Debug` configuration.
+<br>
+Building scons in debug mode can be done by running the task `scons build`.
