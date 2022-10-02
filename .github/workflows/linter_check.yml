@@ -24,4 +24,4 @@ jobs:
           cpplint --version
 
       - name: Check formatting
-        run: cpplint src/*.cpp src/*.h
+        run: cpplint --extensions=cpp,h --recursive src/*
