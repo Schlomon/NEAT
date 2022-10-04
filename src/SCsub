@@ -1,4 +1,2 @@
 Import('env')
-sources = ['neat.cpp',
-            'genome.cpp']
-env.Program(source=sources);
+env.Program(target='neat', source=Glob('*.cpp'), CPPPATH='.')
