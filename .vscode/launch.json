@@ -22,7 +22,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Scons build",
+            "preLaunchTask": "scons build",
             "miDebuggerPath": "gdb",
             "sourceFileMap":{
                 "${workspaceFolder}/debug/": "${workspaceFolder}/src/"
