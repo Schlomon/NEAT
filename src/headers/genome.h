@@ -11,11 +11,12 @@ using std::list;
 class Genome {
  private:
     // private members
-    list<Connection> connections;
+    list<Connection> m_connections;
     // private methods
  public:
     // public members
     // public constructor
     // public methods
-    void addConnection(Node in, Node out);
+    void addConnectionMutation(Node in, Node out);
+    void addNodeMutation(Connection oldConnection);
 };

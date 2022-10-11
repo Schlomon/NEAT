@@ -6,7 +6,7 @@
 class Neat {
  private:
     // private members
-    static int nextInnovationNumber;
+    static int m_nextInnovationNumber;
     // private methods
  public:
     // public members

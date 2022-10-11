@@ -7,18 +7,7 @@
 #include "headers/neat.h"
 #include "headers/util.h"
 
-Connection::Connection(Node in, Node out, double weight, bool enabled) {
-    construct(in, out, weight, enabled);
-}
-
-Connection::Connection(Node in, Node out) {
-    construct(in, out, Util::random(), true);
-}
-
-void Connection::construct(Node in, Node out, double weight, bool enabled) {
-    Connection::in = in;
-    Connection::out = out;
-    Connection::weight = weight;
-    Connection::enabled = enabled;
-    innovationNumber = Neat::getNextInnovationNumber();
+Connection::Connection(Node in, Node out, double weight, bool enabled)
+        : m_in{in}, m_out{out}, m_weight{weight}, m_enabled{enabled},
+        m_innovationNumber{Neat::getNextInnovationNumber()} {
 }

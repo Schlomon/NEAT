@@ -11,7 +11,7 @@
 using std::cout;
 using std::endl;
 
-int Neat::nextInnovationNumber = 0;
+int Neat::m_nextInnovationNumber = 0;
 
 int main() {
     for (int i = 0; i < 10; i++) {
@@ -22,6 +22,6 @@ int main() {
 }
 
 int Neat::getNextInnovationNumber() {
-    nextInnovationNumber++;
-    return nextInnovationNumber;
+    m_nextInnovationNumber++;
+    return m_nextInnovationNumber;
 }

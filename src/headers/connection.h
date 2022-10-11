@@ -4,21 +4,26 @@
 #pragma once
 
 #include "headers/node.h"
+#include "headers/util.h"
 
 class Connection {
  private:
-    // private members
-    int innovationNumber;
-    Node in;
-    Node out;
-    double weight;
-    bool enabled;
-    // private methods
-    void construct(Node in, Node out, double weight, bool enabled);
+      // private members
+      const int m_innovationNumber;
+      const Node m_in;
+      const Node m_out;
+      double m_weight;
+      bool m_enabled;
+      // private methods
  public:
-    // public members
-    // public constructor
-    Connection(Node in, Node out, double weight, bool enabled);
-    Connection(Node in, Node out);
-    // public methods
+      // public members
+      // public constructor
+      Connection(Node in, Node out,
+         double weight = Util::random(), bool enabled = true);
+      // public methods
+      Node inNode() { return m_in; }
+      Node outNode() { return m_out; }
+      double weight() { return m_weight; }
+      bool isEnabled() { return m_enabled; }
+      void disable() { m_enabled = false; }
 };
