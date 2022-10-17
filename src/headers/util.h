@@ -15,11 +15,9 @@ class Util {
     // public methods
     // returns a random number between 0 and 1
     static float random() {
-        // TODO(Schlomon): make only one engine per Thread
-        std::random_device rd;
-        std::default_random_engine rng;
-        rng.seed(rd());
-        std::uniform_real_distribution<float> distr(0, 1);
-        return distr(rng);
+        static std::random_device rd;
+        static std::mt19937 gen(rd());
+        static std::uniform_real_distribution<> dis(0, 1);
+        return dis(gen);
     }
 };

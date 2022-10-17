@@ -22,6 +22,5 @@ int main() {
 }
 
 int Neat::getNextInnovationNumber() {
-    m_nextInnovationNumber++;
-    return m_nextInnovationNumber;
+    return m_nextInnovationNumber++;
 }
