@@ -9,5 +9,5 @@
 
 Connection::Connection(Node in, Node out, double weight, bool enabled)
         : m_in{in}, m_out{out}, m_weight{weight}, m_enabled{enabled},
-        m_innovationNumber{Neat::getNextInnovationNumber()} {
+        m_innovation{Neat::getNextInnovationNumber()} {
 }
