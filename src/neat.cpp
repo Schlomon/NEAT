@@ -14,9 +14,19 @@ using std::endl;
 int Neat::m_nextInnovationNumber = 0;
 
 int main() {
-    for (int i = 0; i < 10; i++) {
-        cout << Util::random() << endl;
-    }
+    Genome g1{};
+    g1.addConnectionMutation(Node{0}, Node{1});
+    g1.addConnectionMutation(Node{2}, Node{3});
+    g1.addConnectionMutation(Node{4}, Node{5});
+
+    Genome g2{};
+    g2.addConnectionMutation(Node{6}, Node{7});
+    g2.addConnectionMutation(Node{8}, Node{9});
+    g2.addConnectionMutation(Node{10}, Node{11});
+
+    Genome g3 = Genome::crossover(g1, g2);
+
+    g3.print();
 
     return 0;
 }

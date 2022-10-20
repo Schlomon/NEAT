@@ -14,7 +14,7 @@ class Util {
     // public constructor
     // public methods
     // returns a random number between 0 and 1
-    static double random() {
+    static double randomDouble() {
         static std::random_device rd;
         static std::mt19937 gen(rd());
         static std::uniform_real_distribution<> dis(0, 1);

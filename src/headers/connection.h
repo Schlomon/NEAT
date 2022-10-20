@@ -19,7 +19,7 @@ class Connection {
     // public members
     // public constructor
     Connection(Node in, Node out,
-      double weight = Util::random(), bool enabled = true);
+      double weight = Util::randomDouble(), bool enabled = true);
     // public methods
     Node inNode() { return m_in; }
     Node outNode() { return m_out; }

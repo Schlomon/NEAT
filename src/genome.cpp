@@ -2,8 +2,11 @@
 // Copyright (c) 2020 Quendt
 
 #include "headers/genome.h"
+#include <list>
 #include "headers/connection.h"
 #include "headers/util.h"
+
+using std::list;
 
 void Genome::addConnectionMutation(Node in, Node out) {
     Connection c{in, out};
@@ -22,22 +25,43 @@ void Genome::addNodeMutation(Connection old) {
 
 Genome Genome::crossover(Genome g1, Genome g2) {
     Genome child{};
-    for (auto c1 : g1.m_connections) {
-        for (auto c2 : g2.m_connections) {
-            if (c1.innovation() == c2.innovation()) {
-                if (Util::random() > 0.5) {
-                    child.m_connections.push_back(c1);
-                } else {
-                    child.m_connections.push_back(c2);
-                }
+
+    list<Connection>& cc = child.m_connections;
+
+    list<Connection> c1 = g1.m_connections;
+    list<Connection> c2 = g2.m_connections;
+
+    list<Connection>::iterator it1 = c1.begin();
+    list<Connection>::iterator it2 = c2.begin();
+
+    while (it1 != c1.end() && it2 != c2.end()) {
+        if (it1->innovation() == it2->innovation()) {
+            if (Util::randomDouble() < 0.5) {
+                cc.push_back(*it1);
             } else {
-                if (g1.fitness() > g2.fitness()) {
-                    child.m_connections.push_back(c1);
-                } else {
-                    child.m_connections.push_back(c2);
-                }
+                cc.push_back(*it2);
             }
+            it1++;
+            it2++;
+        } else if (it1->innovation() < it2->innovation()) {
+            if (g1.fitness() >= g2.fitness()) {
+                cc.push_back(*it1);
+            }
+            it1++;
+        } else {
+            if (g2.fitness() >= g1.fitness()) {
+                cc.push_back(*it2);
+            }
+            it2++;
         }
     }
+
+    if (g2.fitness() >= g1.fitness()) {
+        cc.splice(cc.end(), c2, it2, c2.end());
+    }
+    if (g1.fitness() >= g2.fitness()) {
+        cc.splice(cc.end(), c1, it1, c1.end());
+    }
+
     return child;
 }
