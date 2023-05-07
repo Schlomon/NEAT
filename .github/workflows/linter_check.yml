@@ -1,0 +1,27 @@
+name: CPP Linting
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  checkFormatting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      # Use python 3.x release
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+          architecture: 'x64'
+
+      - name: Install cpplint
+        run: |
+          python -c "import sys; print(sys.version)"
+          python -m pip install cpplint
+          python --version
+          cpplint --version
+
+      - name: Check formatting
+        run: cpplint --extensions=cpp,h --recursive src/*

@@ -12,6 +12,19 @@
                 "isDefault": true
             },
             "detail": "Build with scons in debug mode"
+        },
+        {
+            "type": "shell",
+            "label": "run linter",
+            "command": "cpplint --extensions=cpp,h --recursive src/*",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Run cpplint und all .cpp and .h files in src/"
         }
     ],
     "version": "2.0.0"

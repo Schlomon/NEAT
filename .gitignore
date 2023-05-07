@@ -14,3 +14,4 @@ debug/
 
 # IDE ignores
 .theia/
+.vscode/c_cpp_properties.json
