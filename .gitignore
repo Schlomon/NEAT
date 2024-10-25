@@ -15,3 +15,6 @@ debug/
 # IDE ignores
 .theia/
 .vscode/c_cpp_properties.json
+
+# Custom ignores
+paper.pdf
